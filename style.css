@@ -16,22 +16,28 @@ body {
 
 .name {
     font-size: 2rem; 
+    font-weight: 700;
     margin-top: calc(var(--margin) * 5);
+    color: white;
 }
 
 .short-bio {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     line-height: 1.6;
     margin-top: calc(var(--margin) * 5);
 }
 
 .projects {
-    margin-top: calc(var(--margin) * 4);
+    margin-top: calc(var(--margin) * 9);
 }
 
 .projects h2 {
+    color: white;
     display: block;
     font-size: 1.8rem;
+    font-weight: 600;
+    border-bottom: 4px solid #f1c40f;
+    padding-bottom: calc(var(--pad) * 3);
 }
 
 .projects-container {
@@ -43,42 +49,63 @@ body {
     width: 30%;
     max-width: 300px;
     margin-right: calc(var(--margin) *3);
-    margin-bottom: calc(var(--margin) *3);    
-    padding: calc(var(--pad) *2);
+    margin-bottom: calc(var(--margin) *5);    
+    padding: calc(var(--pad) *5);
+    background-color: #373737;
+    vertical-align: bottom;
+}
+
+.projects-item:hover {
+    background-color: #434343;
 }
 
 .projects-item strong {
+    font-size: 0.95rem;
     display: block;
+    margin-bottom: calc(var(--margin) *2);    
 }
 
 .projects-item span {
+    font-size: 0.90rem;
     display: block;
+    height: 60px;
+    overflow: hidden;
 }
 
-footer {
+
+
+.contact {
     display: flex;
-    border: 1px solid white;
     justify-content: space-between;
     flex-direction: row;
     width: 100%;
-    max-width: 1000px;
     margin: 0 auto;
-    position: absolute;
-    bottom: calc(var(--margin) * 3);;
-    left: 0;
-    right: 0;
-
-
+    margin-top: calc(var(--margin) *9);  
 }
 
-@media (max-width: 600px) {
+.contact a {
+    color: white;
+    flex: 1;
+    text-decoration: none;
+    border: 1px solid #676767; 
+    text-align: center; 
+    padding: calc(var(--pad) *2);
+    font-weight: 600;
+    margin: 0;
+}
+
+.contact a:hover {
+    background-color: #434343;
+}
+
+@media (max-width: 700px) {
     .projects-item {
         display: block;
         width: 100%;
         max-width: none;
     }
     
-    footer {
+    .contact {
         flex-direction: column;
     }
 }
