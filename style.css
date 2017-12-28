@@ -1,78 +1,84 @@
 body {
-    padding: 0;
-    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    background-color: #191919;
+    color: #ecf0f1;
+    --pad: 3px;
+    --margin: 5px;
 }
 
-#container {
-    padding: 0;
-    margin: 0;
-    width: 100%; 
-    height: 100%;
-    position: absolute;
+.wrapper {
+    margin: 0 auto;
+    max-width: 1500px;
+    padding: calc(var(--pad) * 5);
 }
 
-video {
-    min-height: 100%;
-    min-width:100%
-
+.name {
+    font-size: 2rem; 
+    margin-top: calc(var(--margin) * 5);
 }
 
-#videodiv {
-    left: 0;
-    height: 100vh;
-    min-height: 40rem;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
+.short-bio {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: calc(var(--margin) * 5);
+}
+
+.projects {
+    margin-top: calc(var(--margin) * 4);
+}
+
+.projects h2 {
+    display: block;
+    font-size: 1.8rem;
+}
+
+.projects-container {
+    margin-top: calc(var(--margin) * 5);
+}
+
+.projects-item {
+    display: inline-block;
+    width: 30%;
+    max-width: 300px;
+    margin-right: calc(var(--margin) *3);
+    margin-bottom: calc(var(--margin) *3);    
+    padding: calc(var(--pad) *2);
+}
+
+.projects-item strong {
+    display: block;
+}
+
+.projects-item span {
+    display: block;
+}
+
+footer {
+    display: flex;
+    border: 1px solid white;
+    justify-content: space-between;
+    flex-direction: row;
     width: 100%;
-}
-
-#overlay {
+    max-width: 1000px;
+    margin: 0 auto;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 225, .5);
-}
-
-#wrap {
-    width: 50%;
-    height: 60%;
-    background: -moz-radial-gradient(center, rgba(0, 0, 225, 1) 40%, rgba(225, 225, 225, .3));
-    background: -webkit-radial-gradient(center, rgba(0, 0, 225, 1) 40%, rgba(225, 225, 225, .3));
-    background: radial-gradient(center, rgba(0, 0, 225, 1) 40%, rgba(225, 225, 225, .3));
-    position: absolute;
-    top: 0;
-    bottom: 0;
+    bottom: calc(var(--margin) * 3);;
     left: 0;
     right: 0;
-    margin: auto;
-    border-radius: 10px;
-    padding: 5%;
+
+
+}
+
+@media (max-width: 600px) {
+    .projects-item {
+        display: block;
+        width: 100%;
+        max-width: none;
+    }
     
-}
-
-h1 {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    font-size: 200%;
-    border-bottom: 3px solid white;
-    letter-spacing: .2em;
-    padding-bottom: .5em;
-}
-
-p, a {
-    color: white;
-    font-family: sans-serif;
-    line-height: 2em;
-    font-size: 110%;
-}
-
-footer p {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 5px;
-    text-align: center;
-    font-size: 100%;
+    footer {
+        flex-direction: column;
+    }
 }
