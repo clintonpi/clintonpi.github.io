@@ -53,6 +53,7 @@ body {
     padding: calc(var(--pad) *5);
     background-color: #373737;
     vertical-align: bottom;
+    box-sizing: border-box;
 }
 
 .projects-item:hover {
