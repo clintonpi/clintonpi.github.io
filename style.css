@@ -1,3 +1,9 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
@@ -6,6 +12,7 @@ body {
     color: #ecf0f1;
     --pad: 3px;
     --margin: 5px;
+    padding-top: calc(var(--pad) * 20);
 }
 
 .wrapper {
@@ -14,24 +21,44 @@ body {
     padding: calc(var(--pad) * 5);
 }
 
+.intro {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
 .name {
     font-size: 2rem; 
     font-weight: 700;
-    margin-top: calc(var(--margin) * 5);
-    color: white;
+    margin-top: calc(var(--margin) * 1);
+    color: #f1c40f;
+}
+
+@keyframes blink {
+    100%{ color: #191919; }
+}
+
+.underscore {
+    color: #f1c40f;
+    animation: blink 1s infinite linear;
 }
 
 .short-bio {
     font-size: 1.25rem;
     line-height: 1.6;
     margin-top: calc(var(--margin) * 5);
+    width: 50%;
+}
+
+.short-bio a, .short-bio strong {
+    color: #f1c40f;
+    text-decoration: none;
 }
 
 .projects {
     margin-top: calc(var(--margin) * 9);
 }
 
-.projects h2 {
+h2 {
     color: white;
     display: block;
     font-size: 1.8rem;
@@ -53,11 +80,21 @@ body {
     padding: calc(var(--pad) *5);
     background-color: #373737;
     vertical-align: bottom;
-    box-sizing: border-box;
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+@keyframes bounce {
+    50%{ transform: scale(1.05); }
+    70%{ transform: scale(1.02); }
+    100%{ transform: scale(1.05); }
 }
 
 .projects-item:hover {
     background-color: #434343;
+    animation: bounce .3s linear;
+    transform: scale(1.05);
 }
 
 .projects-item strong {
@@ -73,18 +110,16 @@ body {
     overflow: hidden;
 }
 
-
-
-.contact {
+.contact-me {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     width: 100%;
     margin: 0 auto;
-    margin-top: calc(var(--margin) *9);  
+    margin-top: calc(var(--margin) *5);  
 }
 
-.contact a {
+.contact-me a {
     color: white;
     flex: 1;
     text-decoration: none;
@@ -92,21 +127,25 @@ body {
     text-align: center; 
     padding: calc(var(--pad) *2);
     font-weight: 600;
-    margin: 0;
 }
 
-.contact a:hover {
+.contact-me a:hover {
     background-color: #434343;
+    color: #f1c40f;
 }
 
 @media (max-width: 700px) {
+    .short-bio {
+        width: auto;
+    }
+
     .projects-item {
         display: block;
         width: 100%;
         max-width: none;
     }
     
-    .contact {
+    .contact-me {
         flex-direction: column;
     }
 }
