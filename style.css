@@ -131,11 +131,18 @@ h2 {
     text-align: center; 
     padding: calc(var(--pad) *2);
     font-weight: 600;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-height: 35px;
 }
 
 .contact-me a:hover {
     background-color: #434343;
     color: #f1c40f;
+}
+
+#gmail {
+    display: none;
 }
 
 .contact-me a i {
@@ -145,6 +152,10 @@ h2 {
 @media (max-width: 990px) {
     .wrapper {
         background-position: 60vw calc(var(--pad) * 40);
+    }
+
+    #gmail {
+        display: inline; 
     }
 }
 
@@ -173,5 +184,9 @@ h2 {
     
     .contact-me {
         flex-direction: column;
+    }
+
+    #gmail {
+        display: none; 
     }
 }
