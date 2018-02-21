@@ -150,9 +150,16 @@ h2 {
     color: #f1c40f;
 }
 
+@media (max-width: 1170px) {
+    .wrapper {
+        width: auto;
+    }
+}
+
 @media (max-width: 990px) {
     .wrapper {
         background-position: 60vw calc(var(--pad) * 40);
+        width: auto;
     }
 
     #gmail {
@@ -162,6 +169,7 @@ h2 {
 
 @media (max-width: 850px) {
     .wrapper {
+        width: auto;
         background-position: 50vw calc(var(--pad) * 55);
     }
 }
@@ -170,6 +178,7 @@ h2 {
     @media (max-width: 990px) {
         .wrapper {
             background: none;
+            width: auto;
         }
     }
 
