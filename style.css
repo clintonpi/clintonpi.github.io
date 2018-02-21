@@ -17,6 +17,7 @@ body {
 
 .wrapper {
     margin: 0 auto;
+    width: 85%;
     max-width: 1500px;
     padding: calc(var(--pad) * 5);
     background-image: url('./image.png');
