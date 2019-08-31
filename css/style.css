@@ -20,10 +20,6 @@ body {
     width: 85%;
     max-width: 1500px;
     padding: calc(var(--pad) * 5);
-    background-image: url('../images/image.png');
-    background-repeat: no-repeat;
-    background-size: 300px 400px;
-    background-position: 60vw calc(var(--pad) * 20);
 }
 
 .intro {
