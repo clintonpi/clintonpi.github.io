@@ -138,10 +138,6 @@ h2 {
     color: #f1c40f;
 }
 
-#gmail {
-    display: none;
-}
-
 .contact-me a i {
     color: #f1c40f;
 }
@@ -156,10 +152,6 @@ h2 {
     .wrapper {
         background-position: 60vw calc(var(--pad) * 40);
         width: auto;
-    }
-
-    #gmail {
-        display: inline; 
     }
 }
 
@@ -190,9 +182,5 @@ h2 {
     
     .contact-me {
         flex-direction: column;
-    }
-
-    #gmail {
-        display: none; 
     }
 }
